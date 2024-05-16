@@ -1,0 +1,29 @@
+let nftCollection = [];
+
+function mintNFT(name, artist, year, description) { 
+    const nft = {
+        name: name,
+        artist: artist, 
+        year: year, 
+        description: description
+    };
+    nftCollection.push(nft); 
+}
+
+function listNFTs() {
+    nftCollection.forEach((nft, index) => {
+        console.log(`NFT #${index + 1}`);
+        console.log(`Name: ${nft.name}`);
+        console.log(`Artist: ${nft.artist}`);
+        console.log(`Year: ${nft.year}`);
+        console.log(`Description: ${nft.description}`);
+        console.log('--------------------------');
+    });
+}
+
+function getTotalsupply() { 
+    console.log('Total of NFTs mindted: ${nftCollection.length}');
+}
+
+mintNFT('Sunset Bliss', 'John Wick', 2021, 'A beautiful sunset over the mountains.');
+mintNFT('Abstact Thoughts', 'Will Smith', 2022, 'An abstract piece with vibrrant colors.'); 
